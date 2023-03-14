@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    background-color: #ECECED;
+    font-size: 1.6rem;
+}
+
+:root{
+    font-size: 62.5%;
+}
+
+header{
+    display: flex;
+    flex: row;
+    padding: .7rem 2rem;
+
+}
+
+
+nav{
+    display: flex;
+    width: 100%;
+    justify-content: right;
+    gap: 2rem;
+}
+.tt{
+    display: flex;
+}
+
+.one, .two, .tree{
+    height: 3px;
+    background-color: black;
+    width: 100%;
+    margin: .6rem auto;
+}
+
+.menu{
+    height: 3rem;
+    width: 2.9rem;
+    
+}
+
+.logo{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+}
+
+.logo img{
+    width: 5.2rem;
+    height: 2.6rem;
+}
+
+ul{
+    display: none;
+}
+
+
+.search{
+    position: relative;
+    border: 1px solid red;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+}
+.search img{
+    position: absolute;
+    top: .7rem;
+    left: .8rem ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.teste{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.teste.on{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    z-index: 10;
+}
+
+.teste.on  .tt,
+.teste.on .logo {
+    display: none;
+}
+
+.teste.on nav{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.teste.on nav ul{
+    display: block;
+    text-align: center;
+
+}
+
+.teste.on nav ul a{
+    font-size: 2rem;
+    line-height: 8rem;
+    color: black;
+}
+
+.teste.on .menu{
+    position: absolute;
+    top: .7rem;
+    left: 2rem;
+}
+
+.teste.on .menu .one{
+    transform: rotate(45deg) translate(.7rem,.7rem) ;
+}
+
+.teste.on .menu .two{
+    opacity: 0;
+}
+
+.teste.on .menu .tree{
+    transform: rotate(-45deg) translate(.5rem,-.6rem) ;
+}
+
