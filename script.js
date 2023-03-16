@@ -12,16 +12,16 @@ menu.addEventListener('click',() => {
     show = !show;
 })
 
+const icon = document.querySelector('.icon');
 const pes = document.querySelector('.search');
 
 function testeClick(){
-    pes.onclick = () => {
+    icon.onclick = () => {
         if(pes.classList.toggle('active')){
             menu.style.display = 'none';  
-            document.querySelector('.logo').style.display = 'none';
         }else {
             menu.style.display = 'initial';   
-            document.querySelector('.logo').style.display = 'initial';  
+                document.querySelector('.logo').style.display = 'initial';  
         }
           
          
