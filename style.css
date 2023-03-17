@@ -11,6 +11,13 @@ body{
 }
 
 :root{
+    --button: #FF0000;
+    --main-background:  #C4C4C4;
+    --background: #E5E5E5;
+    --text: #000;
+    --footer: #000;
+    --text-description: #9C9696;
+
     font-size: 62.5%;
 }
 
@@ -50,6 +57,7 @@ nav{
     gap: 1rem;
     align-items: center;
     transition: 0.3s;
+    display: block;
 }
 
 .logo img{
@@ -123,13 +131,19 @@ ul{
     left: 0;
     width: 100vw;
     height: 100vh;
-
-    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 100;
+    background-color: var(--main-background);
 }
 
-.teste.on  .tt,
-.teste.on .logo {
+.teste.on  .tt {
     display: none;
+}
+
+.teste.on .logo{
+    display: block;
 }
 
 .teste.on nav{
@@ -167,5 +181,46 @@ ul{
 
 .teste.on .menu .tree{
     transform: rotate(-45deg) translate(.5rem,-.6rem) ;
+}
+
+
+/* Main */
+.box{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--main-background);
+    justify-content: right;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.nsei{
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    gap: 3rem;
+}
+
+
+.box .i1{
+    width: 22rem;
+}
+
+
+.nsei img{
+    width: 8rem;
+}
+
+.boxl{
+    background-color: none;
+    padding: 20px;
+}
+
+main{
+    display: grid;
+    /* grid-template-columns: 1fr; */
+    height: 100vh;
+    width: 100%;
+
 }
 
