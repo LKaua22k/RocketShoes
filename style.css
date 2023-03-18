@@ -194,6 +194,12 @@ ul{
     padding: 1rem 2rem;
 }
 
+.boxl{
+    display: flex;
+    flex-direction: column;
+    gap: 2.1rem;
+}
+
 .nsei{
     display: flex;
     flex-direction: column;
@@ -209,6 +215,10 @@ ul{
 
 .nsei img{
     width: 8rem;
+}
+
+.active{
+    border-bottom: 2px solid red;
 }
 
 .boxl{
