@@ -3,14 +3,15 @@ let show = true;
 let teste = document.querySelector('.teste');
 let menu = document.querySelector('.menu')
 
-menu.addEventListener('click',() => {
-    teste.classList.toggle('on',show);
+function menuClick(){
+    menu.onclick = () => {
+        teste.classList.toggle('on',show);
 
+        document.body.overflow = show ? 'hidden' : 'initial';
     
-    document.body.style.overflow = show ? 'hidden' : 'initial';
-
-    show = !show;
-})
+        show = !show;
+    }
+}
 
 const icon = document.querySelector('.icon');
 const pes = document.querySelector('.search');
@@ -23,7 +24,28 @@ function testeClick(){
             menu.style.display = 'initial';   
             document.querySelector('.logo').style.display = 'block';  
         }
-          
+        
          
     }
+
+
+}
+
+const mails = document.getElementsByClassName('mail')
+const activeImg = document.getElementsByClassName('active')
+
+
+for (var i = 0; i < mails.length ; i++){
+
+    mails[i].addEventListener('click', function(){
+        console.log(activeImg)
+
+        if (activeImg.length > 0) {
+            activeImg[0].classList.remove('active')
+        }
+
+        this.classList.add('active')
+        document.getElementById('featured').src = this.src
+    })
+    
 }
