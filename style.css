@@ -8,6 +8,11 @@
 body {
   background-color: #ececed;
   font-size: 1.6rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+body *{
+  font-family: 'Roboto', sans-serif;
 }
 
 :root {
@@ -187,7 +192,7 @@ ul {
   display: flex;
   flex-direction: row;
   background-color: var(--main-background);
-  justify-content: right;
+  justify-content: center;
   align-items: center;
   padding: 1rem 1rem;
   gap: 1rem;
