@@ -319,10 +319,3 @@ iframe{
   padding: 1.4rem 10rem;
   gap: 0.5rem;
 }
-
-
-.footer_button:hover{
-  background-color: red;
-  border: 1px solid var(--text);
-  color: var(--text);
-}
