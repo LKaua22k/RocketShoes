@@ -32,7 +32,7 @@ function testeClick(){
 }
 
 const mails = document.getElementsByClassName('mail')
-const activeImg = document.getElementsByClassName('active')
+const activeImg = document.getElementsByClassName('hover')
 
 
 for (var i = 0; i < mails.length ; i++){
@@ -40,11 +40,11 @@ for (var i = 0; i < mails.length ; i++){
     mails[i].addEventListener('click', function(){
         console.log(activeImg)
 
-        if (activeImg.length > 0) {
-            activeImg[0].classList.remove('active')
+        if (activeImg.length >= 0) {
+            activeImg[0].classList.remove('hover')
         }
 
-        this.classList.add('active')
+        this.classList.add('hover');
         document.getElementById('featured').src = this.src
     })
     
