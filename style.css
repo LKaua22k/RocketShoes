@@ -8,14 +8,14 @@
 body {
   background-color: #ececed;
   font-size: 1.6rem;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
-body *{
-  font-family: 'Roboto', sans-serif;
+body * {
+  font-family: "Roboto", sans-serif;
 }
 
-.t0{
+.t0 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -36,19 +36,28 @@ body *{
 
 header {
   display: flex;
-  flex: row;
-  padding: 0.7rem 1rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem 2rem;
+  border: none;
   background-color: var(--main-background);
 }
 
 nav {
   display: flex;
   width: 100%;
-  justify-content: right;
-  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
 }
+
 .tt {
+  position: relative;
   display: flex;
+}
+
+.teste1.on .sotore {
+  display: none;
 }
 
 .one,
@@ -63,19 +72,16 @@ nav {
 
 .menu {
   height: 3rem;
-  width: 2.9rem;
+  width: 2.5rem;
   cursor: pointer;
 }
-
-.logo {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  transition: 0.3s;
+.teste1.on .logo img {
   display: block;
+  align-items: center;
 }
 
 .logo img {
+  display: none;
   width: 5.2rem;
   height: 2.6rem;
 }
@@ -84,59 +90,35 @@ nav {
   display: none;
 }
 
-.search {
-  position: relative;
-  border: 1px solid red;
-  width: 4rem;
-  height: 4rem;
-  border-radius: 6rem;
-  transition: 1.5s;
-  cursor: pointer;
-  overflow: hidden;
+.tlm {
+  position: relative ;
+  width: 21rem ;
 }
 
-.search.active {
-  width: 21rem;
-  transition: 0.3s;
-}
-
-.search img {
+.tt img {
   position: absolute;
-  top: 0.7rem;
-  left: 0.8rem;
-  display: block;
-  justify-content: center;
-  align-items: center;
-}
-.search .input {
-  position: relative;
-  left: 4rem;
-  width: 17rem;
-  height: 4rem;
-  border: 1px solid red;
-  display: block;
-  justify-content: center;
-  align-items: center;
+  top: 0.5rem;
+  left: 0.4rem;
+  width: 1.8rem;
+  display: flex;
+  align-items: center ;
+  justify-content: center ;
 }
 
-.search .input input {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
+.tt input {
   border: none;
   outline: none;
-  padding: 1rem 0;
-  font-size: 1.8rem;
+  width: 100%;
+  font-size: 1.4rem;
+  padding: 0.5rem 3rem;
 }
 
 .teste {
   display: flex;
-  width: 100%;
-  align-items: center;
+  border: none;
 }
 
-.teste.on {
+.teste1.on {
   position: absolute;
   top: 0;
   left: 0;
@@ -149,16 +131,18 @@ nav {
   background-color: var(--main-background);
 }
 
-.teste.on .tt {
+.teste1.on .tt {
   display: none;
 }
 
-.teste.on .logo {
+.teste1.on .logo {
   display: block;
 }
 
-.teste.on nav {
+.teste1.on nav {
   width: 100%;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -168,32 +152,32 @@ nav {
   border-bottom: 2px solid white;
 }
 
-.teste.on nav .navlinks {
+.teste1.on nav .navlinks {
   display: block;
   text-align: center;
 }
 
-.teste.on nav .navlinks .link {
+.teste1.on nav .navlinks .link {
   font-size: 2rem;
   line-height: 8rem;
   color: black;
 }
 
-.teste.on .menu {
+.teste1.on .menu {
   position: absolute;
   top: 0.7rem;
   left: 2rem;
 }
 
-.teste.on .menu .one {
+.teste1.on .menu .one {
   transform: rotate(45deg) translate(0.7rem, 0.7rem);
 }
 
-.teste.on .menu .two {
+.teste1.on .menu .two {
   opacity: 0;
 }
 
-.teste.on .menu .tree {
+.teste1.on .menu .tree {
   transform: rotate(-45deg) translate(0.5rem, -0.6rem);
 }
 
@@ -292,19 +276,19 @@ footer {
   padding: 2rem;
 }
 
-iframe{
+iframe {
   width: 100%;
   height: 23rem;
 }
 
-.footer_links{
+.footer_links {
   display: flex;
   width: 100%;
   justify-content: space-around;
   align-items: center;
 }
 
-.footer_links a{
+.footer_links a {
   color: var(--text);
   padding: 1rem 0.5rem;
   font-size: 1.4rem;
@@ -313,12 +297,12 @@ iframe{
   transition: 1s;
 }
 
-.footer_links a:hover{
+.footer_links a:hover {
   border: 1px solid var(--text);
   transition: 1s;
 }
 
-.footer_button{
+.footer_button {
   position: relative;
   background-color: var(--footer);
   color: white;
@@ -329,20 +313,28 @@ iframe{
   gap: 0.5rem;
 }
 
-@media (min-width:480px) {
-  .box{
+@media (min-width: 520px) {
+  .box {
     flex-direction: column;
   }
 
-  .nsei{
+  header {
+    padding: 0.7rem 0rem;
+  }
+
+  .nsei {
     flex-direction: row;
   }
 
-  .menu{
+  .menu {
     display: none;
   }
 
-  .navlinks{
+  .logo img {
+    display: block;
+  }
+
+  .navlinks {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -350,41 +342,15 @@ iframe{
     align-items: center;
     font-size: 1.4rem;
   }
-  nav{
+  nav {
     gap: 1rem;
   }
 
-  .tt{
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
+  .tlm {
+    width: 15rem;
   }
-  .navlinks a{
+  .navlinks a {
     color: var(--text);
     font-weight: 700;
   }
-
-  .search img{
-    position: initial;
-  }
-
-.search {
-  display: flex;
-  position: static;
-  width: 12rem;
-  height: 2.7rem;
-  border-radius: 1px;
-  border: none;
-}
-.search .input{
-  position: static;
-  border: 0px;
-  width: auto;
-  height: auto;
-}
-
-.search .input input {
-  position: static;
-  
-}
 }
