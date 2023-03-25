@@ -40,7 +40,6 @@ header {
   justify-content: space-between;
   padding: 0.7rem 2rem;
   border: none;
-  background-color: var(--main-background);
 }
 
 nav {
@@ -229,6 +228,7 @@ main {
   width: 100%;
 }
 
+
 .boxl h1 {
   color: var(--text);
   font-size: 2.3rem;
@@ -272,20 +272,14 @@ main button:hover {
 footer {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
   padding: 2rem;
-}
-
-iframe {
   width: 100%;
-  height: 23rem;
 }
 
 .footer_links {
   display: flex;
-  width: 100%;
-  justify-content: space-around;
   align-items: center;
+  justify-content: center;
 }
 
 .footer_links a {
@@ -297,10 +291,11 @@ iframe {
   transition: 1s;
 }
 
-.footer_links a:hover {
+
+/* .footer_links a:hover {
   border: 1px solid var(--text);
   transition: 1s;
-}
+} */
 
 .footer_button {
   position: relative;
@@ -354,3 +349,74 @@ iframe {
     font-weight: 700;
   }
 }
+
+@media (min-width: 1000px) {
+  header{
+    position: fixed;
+    width: 100%;
+  }
+
+  .nsei img{
+    width: 20rem;
+  }
+
+  main{
+    grid-template-columns: auto auto;
+
+  }
+  .box{
+    justify-content: end;
+    gap: 10rem;
+  }
+
+  .box .i1{
+    width: 35rem;
+  }
+
+  .boxl{
+    order: -1;
+    width: 35.7rem;
+    margin: 8.8rem auto;
+    
+  }
+
+  .boxl h1{
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 7rem;
+    width: 35rem;
+  }
+
+  .boxl button{
+    width: 17.4rem;
+    padding: 2rem;
+  }
+
+  footer{
+    flex-direction: row;
+    padding: 0rem;
+  }
+
+  iframe{
+    width: 30rem;
+    height: 16.5rem;
+  }
+
+
+  .footer_links a{
+    font-size: 1.8rem;
+    margin-right: 4rem
+  }
+}
+
+@media (min-width: 1062px) {
+  .footer_links a{
+    font-size: 1.8rem;
+    margin-right: 10.3rem
+  }
+
+  footer img{
+    margin-right:38px ;
+  }
+}
+  
