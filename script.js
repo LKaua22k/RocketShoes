@@ -3,15 +3,14 @@ let show = true;
 let teste = document.querySelector(".teste1");
 let menu = document.querySelector(".menu");
 
-function menuClick() {
-  menu.onclick = () => {
-    teste.classList.toggle("on", show);
+menu.addEventListener('click', () => {
 
-    document.body.overflow = show ? "hidden" : "initial";
+  document.body.style.overflow = show ? "hidden" : "initial"
 
-    show = !show;
-  };
-}
+  teste.classList.toggle("on", show)
+
+  show = !show;
+})
 
 const mails = document.getElementsByClassName("mail");
 const activeImg = document.getElementsByClassName("hover");
@@ -28,3 +27,9 @@ for (var i = 0; i < mails.length; i++) {
     document.getElementById("featured").src = this.src;
   });
   };
+
+
+  window.addEventListener("scroll", function () {
+    teste.classList.toggle("sticky", scrollY > 40)
+  });
+    
