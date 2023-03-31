@@ -1,6 +1,6 @@
 let show = true;
 
-let teste = document.querySelector(".teste1");
+let teste = document.querySelector(".header");
 let menu = document.querySelector(".menu");
 
 menu.addEventListener('click', () => {
@@ -12,7 +12,7 @@ menu.addEventListener('click', () => {
   show = !show;
 })
 
-const mails = document.getElementsByClassName("mail");
+const mails = document.getElementsByClassName("imgs");
 const activeImg = document.getElementsByClassName("hover");
 
 for (var i = 0; i < mails.length; i++) {

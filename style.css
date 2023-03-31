@@ -15,14 +15,6 @@ body * {
   font-family: "Roboto", sans-serif;
 }
 
-.t0 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 170px;
-}
-
 :root {
   --button: #ff0000;
   --main-background: #c4c4c4;
@@ -50,13 +42,15 @@ nav {
   border: none;
 }
 
-.tt {
-  position: relative;
+.menu_box {
   display: flex;
+  border: none;
 }
 
-.teste1.on .sotore {
-  display: none;
+.menu {
+  height: 3rem;
+  width: 2.5rem;
+  cursor: pointer;
 }
 
 .one,
@@ -69,16 +63,6 @@ nav {
   transition-duration: 0.4s;
 }
 
-.menu {
-  height: 3rem;
-  width: 2.5rem;
-  cursor: pointer;
-}
-.teste1.on .logo img {
-  display: block;
-  align-items: center;
-}
-
 .logo img {
   display: none;
   width: 5.2rem;
@@ -89,12 +73,12 @@ nav {
   display: none;
 }
 
-.tlm {
-  position: relative ;
-  width: 21rem ;
+.box_input {
+  position: relative;
+  display: flex;
 }
 
-.tt img {
+.box_input img {
   position: absolute;
   top: 0.5rem;
   left: 0.4rem;
@@ -104,7 +88,7 @@ nav {
   justify-content: center ;
 }
 
-.tt input {
+.box_input input {
   border: none;
   outline: none;
   width: 100%;
@@ -112,12 +96,12 @@ nav {
   padding: 0.5rem 3rem;
 }
 
-.teste {
-  display: flex;
-  border: none;
+.search {
+  position: relative ;
+  width: 21rem ;
 }
 
-.teste1.on {
+.header.on {
   position: absolute;
   top: 0;
   left: 0;
@@ -130,15 +114,29 @@ nav {
   background-color: var(--main-background);
 }
 
-.teste1.on .tt {
-  display: none;
+.header.on .menu {
+  position: absolute;
+  top: 0.7rem;
+  left: 2rem;
 }
 
-.teste1.on .logo {
+.header.on .menu .one {
+  transform: rotate(45deg) translate(0.7rem, 0.7rem);
+}
+
+.header.on .menu .two {
+  opacity: 0;
+}
+
+.header.on .menu .tree {
+  transform: rotate(-45deg) translate(0.5rem, -0.6rem);
+}
+
+.header.on .logo {
   display: block;
 }
 
-.teste1.on nav {
+.header.on nav {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -146,42 +144,39 @@ nav {
   align-items: center;
 }
 
-.mail {
-  background-color: white;
-  border-bottom: 2px solid white;
-}
-
-.teste1.on nav .navlinks {
+.header.on nav .navlinks {
   display: block;
   text-align: center;
 }
 
-.teste1.on nav .navlinks .link {
+.header.on nav .navlinks .link {
   font-size: 2rem;
   line-height: 8rem;
   color: black;
 }
 
-.teste1.on .menu {
-  position: absolute;
-  top: 0.7rem;
-  left: 2rem;
+.header.on .logo img {
+  display: block;
+  align-items: center;
 }
 
-.teste1.on .menu .one {
-  transform: rotate(45deg) translate(0.7rem, 0.7rem);
+.header.on .box_input {
+  display: none;
 }
 
-.teste1.on .menu .two {
-  opacity: 0;
-}
 
-.teste1.on .menu .tree {
-  transform: rotate(-45deg) translate(0.5rem, -0.6rem);
+.header.on .box_store {
+  display: none;
 }
 
 /* Main */
-.box {
+main {
+  display: grid;
+  /* grid-template-columns: 1fr; */
+  width: 100%;
+}
+
+.container {
   display: flex;
   flex-direction: row;
   background-color: var(--main-background);
@@ -191,65 +186,66 @@ nav {
   gap: 1rem;
 }
 
-.boxl {
-  display: flex;
-  flex-direction: column;
-  gap: 1.9rem;
+.container .big_img {
+  width: 22rem;
+  border-radius: 0px 40px 40px;
 }
 
-.nsei {
+.main_img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 170px;
+}
+
+.group_img {
   display: flex;
   flex-direction: column;
   align-items: right;
   gap: 3rem;
 }
 
-.box .i1 {
-  width: 22rem;
-  border-radius: 0px 40px 40px;
-}
-
-.nsei img {
+.group_img img {
   width: 8rem;
 }
 
-.hover {
-  border-bottom: 2px solid red;
+.imgs {
+  background-color: white;
+  border-bottom: 2px solid white;
 }
 
-.boxl {
+
+
+.container_form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.9rem;
   background-color: none;
   padding: 20px;
 }
 
-main {
-  display: grid;
-  /* grid-template-columns: 1fr; */
-  width: 100%;
-}
-
-
-.boxl h1 {
+.container_form h1 {
   color: var(--text);
   font-size: 2.3rem;
   font-weight: 700;
   line-height: 3rem;
 }
 
-.boxl p {
+.container_form p {
   font-size: 1.6rem;
   font-weight: 700;
   line-height: 1.8rem;
   color: var(--text-description);
 }
 
-.boxl span {
+.container_form span {
   color: var(--text);
   font-size: 3rem;
   font-weight: 700;
 }
 
-.boxl button {
+.container_form button {
   color: white;
   font-size: 1.8rem;
   font-weight: 700;
@@ -258,6 +254,10 @@ main {
   padding: 1.4rem;
   border: 1px solid white;
   transition: 0.5s;
+}
+
+.hover {
+  border-bottom: 2px solid red;
 }
 
 main button:hover {
@@ -280,6 +280,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 2rem;
 }
 
 .footer_links a {
@@ -291,12 +292,6 @@ footer {
   transition: 1s;
 }
 
-
-/* .footer_links a:hover {
-  border: 1px solid var(--text);
-  transition: 1s;
-} */
-
 .footer_button {
   position: relative;
   background-color: var(--footer);
@@ -306,18 +301,19 @@ footer {
   justify-content: center;
   width: 100%;
   gap: 0.5rem;
+  
 }
 
 @media (min-width: 520px) {
-  .box {
-    flex-direction: column;
-  }
-
   header {
     padding: 0.7rem 0rem;
   }
+  
+  .container {
+    flex-direction: column;
+  }
 
-  .nsei {
+  .group_img {
     flex-direction: row;
   }
 
@@ -341,12 +337,36 @@ footer {
     gap: 1rem;
   }
 
-  .tlm {
+  .search {
     width: 15rem;
   }
   .navlinks a {
     color: var(--text);
     font-weight: 700;
+    transition: 0.5s;
+  }
+
+  .navlinks a:hover{
+    color: gray;
+    transition: 0.5s;
+  }
+
+  .footer_links{
+    margin: none;
+  }
+
+  .footer_button{
+    height: none;
+  }
+
+  .footer_links a:hover{
+    color: gray;
+  }
+}
+
+@media (min-width: 597px) {
+  footer{
+    flex-direction: row;
   }
 }
 
@@ -357,7 +377,7 @@ footer {
     transition: 1s;
   }
 
-  .nsei img{
+  .group_img img{
     width: 20rem;
   }
 
@@ -365,30 +385,30 @@ footer {
     grid-template-columns: auto auto;
 
   }
-  .box{
+  .container{
     justify-content: end;
     gap: 10rem;
   }
 
-  .box .i1{
+  .container .big_img {
     width: 35rem;
   }
 
-  .boxl{
+  .container_form{
     order: -1;
     width: 35.7rem;
     margin: 8.8rem auto;
     
   }
 
-  .boxl h1{
+  .container_form h1{
     font-size: 6rem;
     font-weight: 700;
     line-height: 7rem;
     width: 35rem;
   }
 
-  .boxl button{
+  .container_form button{
     width: 17.4rem;
     padding: 2rem;
   }
@@ -432,15 +452,15 @@ footer {
     font-size: 1.8rem;
   }
 
-  .tt{
+  .box_input{
     margin-right: 20px;
   } 
 
-  .sotore img{
+  .box_store img{
     width: 29px;
   }
   
-  .sotore{
+  .box_store{
     margin-left: 20px;
   }
 }
